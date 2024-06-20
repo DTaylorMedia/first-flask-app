@@ -1,8 +1,9 @@
 #!/usr/bin/env python
+from flask import Flask
+from views import my_view
 
-def main():
-	print("Hello World!")
+app = Flask(__name__)
+app.register_blueprint(my_view)
 
-if __name__ != '__main__':
-	raise RuntimeError("Cannot import a main script!")
-main()
+if __name__ == '__main__':
+	app.run(debug=True, port=8000)

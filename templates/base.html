@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>MyFlaskApp</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<nav>
+	<!--
+		<a href=""></a>
+	-->
+
+		<a href="{{ url_for('my_view.index') }}">Home</a>
+		<a href="{{ url_for('my_view.helloworld') }}">HelloWorld</a>
+		<a href="{{ url_for('my_view.contributers') }}">Contributes</a>
+	</nav>
+	<div>
+		{% block content %}{% endblock %}
+	</div>
+</body>
+</html>
